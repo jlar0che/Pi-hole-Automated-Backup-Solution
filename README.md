@@ -53,7 +53,7 @@ In the end I opted to use "Teleporter" -- the built-in configuration backup solu
 The next problem was "how do I automate this?". Teleporter works fine, but the joys of a successful Home Lab architecture is not having a ton of things that require manual handling. Hence, this project was born!
 
 **NOTE:**  
-In addition to the automated Teleporter backups provided by this solution, I setup a secondary Pi-hole DNS server and sync it with my primary Pi-hole instance using ~~Orbital Sync~~ [Nebula-Sync](https://github.com/lovelaze/nebula-sync){:target="_blank"}. Therefore, for my setup to fail my Primary Pi-hole instance on my Raspberry Pi plus my backups of that instance on my NAS plus my secondary Pi-hole instance running in Docker would both have to fail.  
+In addition to the automated Teleporter backups provided by this solution, I setup a secondary Pi-hole DNS server and sync it with my primary Pi-hole instance using ~~Orbital Sync~~ [Nebula-Sync](https://github.com/lovelaze/nebula-sync). Therefore, for my setup to fail my Primary Pi-hole instance on my Raspberry Pi plus my backups of that instance on my NAS plus my secondary Pi-hole instance running in Docker would both have to fail.  
 
 
 ### Built With
