@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ---------------------
-# Pi-hole backup v0.6.2
+# Pi-hole backup v0.6.3
 # Jacques_Laroche
 # ---------------------
 
@@ -23,7 +23,7 @@ echo "=====[ BEGIN BACKUP LOG ENTRY ]==================" >> "$LOG_FILE"
 cd "$BACKUP_DIR" || { echo "Backup directory not found!" >> "$LOG_FILE"; exit 1; }
 
 echo "$(date '+%Y-%m-%d %H:%M:%S') - Running Pi-hole backup" >> "$LOG_FILE"
-pihole -a -t  # This command automatically creates the backup file
+pihole-FTL --teleporter # This command automatically creates the backup file in Pi-Hole v6.x
 
 # Find the most recently created Pi-hole backup file
 # --------------------------------------------------

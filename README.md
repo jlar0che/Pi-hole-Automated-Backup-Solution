@@ -1,4 +1,4 @@
-# Pi-hole Automated Backup Solution
+\# Pi-hole Automated Backup Solution
 Automate your Pi-hole backups with this workflow. The script uses the command-line version of Pi-hole's built-in 'Teleporter' to create a configuration backup, which is then transferred to your chosen destination (e.g., a NAS) via rsync. A log of the transfer is also saved to the destination directory. To conserve space, only the four most recent Teleporter backups are kept and synced, ensuring efficient use of storage.
 
 [![Contributors][contributors-shield]][contributors-url]
@@ -53,7 +53,7 @@ In the end I opted to use "Teleporter" -- the built-in configuration backup solu
 The next problem was "how do I automate this?". Teleporter works fine, but the joys of a successful Home Lab architecture is not having a ton of things that require manual handling. Hence, this project was born!
 
 **NOTE:**  
-In addition to the automated Teleporter backups provided by this solution, I setup a secondary Pi-hole DNS server and synced it with my primary Pi-hole instance using [Orbital Sync](https://github.com/mattwebbio/orbital-sync). Therefore for my setup to fail my Primary Pi-hole instance on my Raspberry Pi plus my backups of that instance on my NAS plus my secondary Pi-hole instance running in Docker would all have to fail.  
+In addition to the automated Teleporter backups provided by this solution, I setup a secondary Pi-hole DNS server and synced it with my primary Pi-hole instance using ~~Orbital Sync~~ [Nebula-Sync](https://github.com/lovelaze/nebula-sync). Therefore, for my setup to fail my Primary Pi-hole instance on my Raspberry Pi plus my backups of that instance on my NAS plus my secondary Pi-hole instance running in Docker would both have to fail.  
 
 
 ### Built With
@@ -130,6 +130,8 @@ For me, I set it to run on the first of every month by adding the following line
 
 ## Release History
 
+* 0.6.3
+    * Update teleporter command in script to work with Pi-hole v6.x
 * 0.6.2
     * Set rsync to keep number of backups the same on both source and destination.
 * 0.6.0
